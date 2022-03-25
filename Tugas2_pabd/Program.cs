@@ -21,10 +21,29 @@ namespace Tugas2_pabd
                 con = new SqlConnection("data source=ALFIN\\ALFINKS; database=Tugas2; Integrated Security = TRUE");
                 con.Open();
 
+                SqlCommand cm = new SqlCommand("insert into kasir(Id_kasir, Nama_Kasir, Bagian) values('2020001', 'Maulana', 'Pagi')"
+                   + "insert into kasir(Id_kasir, Nama_Kasir, Bagian) values('2020001', 'Maulana', 'Sore')"
+                   + "insert into kasir(Id_kasir, Nama_Kasir, Bagian) values('20200012', 'Alfiansyah', 'Siang')"
+                   + "insert into kasir(Id_kasir, Nama_Kasir, Bagian) values('20200013', 'Alfin', 'Malam')"
+                   + "insert into kasir(Id_kasir, Nama_Kasir, Bagian) values('20200014', 'Maul', 'Pagi')", con);
 
+                cm.ExecuteNonQuery();
+
+                Console.WriteLine("Sukses menambahkan data");
+                Console.ReadKey();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Gagal menambahkan data. " + e);
+                Console.ReadKey();
+            }
+            finally
+            {
+                con.Close();
             }
         }
-        
-        
     }
-}
+}     
+        
+        
+    
