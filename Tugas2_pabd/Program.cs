@@ -34,6 +34,11 @@ namespace Tugas2_pabd
                    +"insert into Transaksi(id_Transaksi, id_Barang, id_Costumer, id_kasir,Nama_Kasir,Tgl_Transaksi) values('T004','B004','C004', 'K004','Maul','29-03-2021') "
                    +"insert into Transaksi(id_Transaksi, id_Barang, id_Costumer, id_kasir,Nama_Kasir,Tgl_Transaksi) values('T005','B005','C005', 'K005','alfian','30-03-2021') "
 
+                    +"insert into Barang(id_Barang, Nama_Barang,Harga, Stock) values('B001', 'Bolu_Original', '20000', '20')"
+                    +"insert into Barang(id_Barang, Nama_Barang,Harga, Stock) values('B002', 'Bolu_Pandan', '25000', '10')"
+                    +"insert into Barang(id_Barang, Nama_Barang,Harga, Stock) values('B003', 'Bolu_Coklat', '20000', '40')"
+                    +"insert into Barang(id_Barang, Nama_Barang,Harga, Stock) values('B004', 'Bolu_Keju', '30000', '20')"
+                    +"insert into Barang(id_Barang, Nama_Barang,Harga, Stock) values('B005', 'Bolu_Coklat_Keju', '60000', '25')"
                    , 
                    
                    con);
