@@ -18,36 +18,33 @@ namespace Tugas2_pabd
             SqlConnection con = null;
             try
             {
-                con = new SqlConnection("data source=ALFIN\\ALFINKS; database=Tugas2; Integrated Security = TRUE");
+                con = new SqlConnection("data source=ALFIN\\ALFINKS; database=Tugas2; " + " user ID = sa; Password = maulana");
                 con.Open();
 
-                SqlCommand cm = new SqlCommand("insert into kasir(Id_kasir, Nama_Kasir, Bagian) values('2020001', 'Maulana', 'Pagi')"
-                   + "insert into kasir(Id_kasir, Nama_Kasir, Bagian) values('2020001', 'Maulanaa', 'Sore')"
-                   + "insert into kasir(Id_kasir, Nama_Kasir, Bagian) values('20200012', 'Alfiansyah', 'Siang')"
-                   + "insert into kasir(Id_kasir, Nama_Kasir, Bagian) values('20200013', 'Alfin', 'Malam')"
-                   + "insert into kasir(Id_kasir, Nama_Kasir, Bagian) values('20200014', 'Maul', 'Pagi')"
+                SqlCommand cm = new SqlCommand("insert into kasir(id_kasir, Nama_kasir, Bagian) values('202000000011', 'Maulana', 'Pagi')"
+                   + "insert into kasir(id_kasir, Nama_kasir, Bagian) values('202000000001', 'Maulanaa', 'Sore')"
+                   + "insert into kasir(id_kasir, Nama_kasir, Bagian) values('202000000012', 'Alfiansyah', 'Siang')"
+                   + "insert into kasir(id_kasir, Nama_kasir, Bagian) values('202000000013', 'Alfin', 'Malam')"
+                   + "insert into kasir(id_kasir, Nama_kasir, Bagian) values('202000000014', 'Maul', 'Pagi')"
 
 
-                   +"insert into Transaksi(id_Transaksi, id_Barang, id_Costumer, id_kasir,Nama_Kasir,Tgl_Transaksi) values('T001','B001','C001', 'K001','Maulana','26-03-2021') "
-                   +"insert into Transaksi(id_Transaksi, id_Barang, id_Costumer, id_kasir,Nama_Kasir,Tgl_Transaksi) values('T002','B002','C002', 'K002','Alfiansyah','27-03-2021') "
-                   +"insert into Transaksi(id_Transaksi, id_Barang, id_Costumer, id_kasir,Nama_Kasir,Tgl_Transaksi) values('T003','B003','C003', 'K003','Alfin','28-03-2021') "
-                   +"insert into Transaksi(id_Transaksi, id_Barang, id_Costumer, id_kasir,Nama_Kasir,Tgl_Transaksi) values('T004','B004','C004', 'K004','Maul','29-03-2021') "
-                   +"insert into Transaksi(id_Transaksi, id_Barang, id_Costumer, id_kasir,Nama_Kasir,Tgl_Transaksi) values('T005','B005','C005', 'K005','alfian','30-03-2021') "
+                   + "insert into Transaksi(id_Transaksi, id_Barang, id_Costumer, id_kasir,Nama_kasir,Tgl_Transaksi) values('T00000000001','B00000000011','C00000000021', '202000000011','Maulana','26-03-2021') "
+                   + "insert into Transaksi(id_Transaksi, id_Barang, id_Costumer, id_kasir,Nama_kasir,Tgl_Transaksi) values('T00000000002','B00000000022','C00000000032', '202000000001','Alfiansyah','27-03-2021') "
+                   + "insert into Transaksi(id_Transaksi, id_Barang, id_Costumer, id_kasir,Nama_kasir,Tgl_Transaksi) values('T00000000003','B00000000033','C00000000023', '202000000012','Alfin','28-03-2021') "
+                   + "insert into Transaksi(id_Transaksi, id_Barang, id_Costumer, id_kasir,Nama_kasir,Tgl_Transaksi) values('T00000000004','B00000000044','C00000000024', '202000000013','Maul','29-03-2021') "
+                   + "insert into Transaksi(id_Transaksi, id_Barang, id_Costumer, id_kasir,Nama_kasir,Tgl_Transaksi) values('T00000000005','B00000000055','C00000000025', '202000000014','alfian','30-03-2021') "
 
-                    +"insert into Barang(id_Barang, Nama_Barang,Harga, Stock) values('B001', 'Bolu_Original', '20000', '20')"
-                    +"insert into Barang(id_Barang, Nama_Barang,Harga, Stock) values('B002', 'Bolu_Pandan', '25000', '10')"
-                    +"insert into Barang(id_Barang, Nama_Barang,Harga, Stock) values('B003', 'Bolu_Coklat', '20000', '40')"
-                    +"insert into Barang(id_Barang, Nama_Barang,Harga, Stock) values('B004', 'Bolu_Keju', '30000', '20')"
-                    +"insert into Barang(id_Barang, Nama_Barang,Harga, Stock) values('B005', 'Bolu_Coklat_Keju', '60000', '25')"
+                    + "insert into Barang(id_Barang, Nama_Barang,Harga, Stock) values('B00000000011', 'Bolu_Original', '20000', '20')"
+                    +"insert into Barang(id_Barang, Nama_Barang,Harga, Stock) values('B00000000022', 'Bolu_Pandan', '25000', '10')"
+                    +"insert into Barang(id_Barang, Nama_Barang,Harga, Stock) values('B00000000033', 'Bolu_Coklat', '20000', '40')"
+                    +"insert into Barang(id_Barang, Nama_Barang,Harga, Stock) values('B00000000044', 'Bolu_Keju', '30000', '20')"
+                    +"insert into Barang(id_Barang, Nama_Barang,Harga, Stock) values('B00000000055', 'Bolu_Coklat_Keju', '60000', '25')"
 
-                    + "insert into Costumer(id_Costumer, Nama, Alamat, No_tlp) values('C001', 'bagus', 'Sumedang', '085294395071')"
-                    + "insert into Costumer(id_Costumer, Nama, Alamat, No_tlp) values('C002', 'Fikri', 'Bandung', '085294395072')"
-                    + "insert into Costumer(id_Costumer, Nama, Alamat, No_tlp) values('C003', 'bagas', 'Majalengka', '085294395073')"
-                    + "insert into Costumer(id_Costumer, Nama, Alamat, No_tlp) values('C004', 'gisa', 'Bantul', '085294395074')"
-                    + "insert into Costumer(id_Costumer, Nama, Alamat, No_tlp) values('C005', 'gabus', 'Kuningan', '085294395075')"
-                   , 
-                   
-                   con);
+                    + "insert into Costumer(id_Costumer, Nama, Alamat, No_tlp) values('C00000000021', 'bagus', 'Sumedang', '085294395071')"
+                    + "insert into Costumer(id_Costumer, Nama, Alamat, No_tlp) values('C00000000032', 'Fikri', 'Bandung', '085294395072')"
+                    + "insert into Costumer(id_Costumer, Nama, Alamat, No_tlp) values('C00000000023', 'bagas', 'Majalengka', '085294395073')"
+                    + "insert into Costumer(id_Costumer, Nama, Alamat, No_tlp) values('C00000000024', 'gisa', 'Bantul', '085294395074')"
+                    + "insert into Costumer(id_Costumer, Nama, Alamat, No_tlp) values('C00000000025', 'gabus', 'Kuningan', '085294395075')",con);
 
                 cm.ExecuteNonQuery();
 
