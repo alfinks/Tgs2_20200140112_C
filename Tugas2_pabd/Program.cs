@@ -39,6 +39,12 @@ namespace Tugas2_pabd
                     +"insert into Barang(id_Barang, Nama_Barang,Harga, Stock) values('B003', 'Bolu_Coklat', '20000', '40')"
                     +"insert into Barang(id_Barang, Nama_Barang,Harga, Stock) values('B004', 'Bolu_Keju', '30000', '20')"
                     +"insert into Barang(id_Barang, Nama_Barang,Harga, Stock) values('B005', 'Bolu_Coklat_Keju', '60000', '25')"
+
+                    + "insert into Costumer(id_Costumer, Nama, Alamat, No_tlp) values('C001', 'bagus', 'Sumedang', '085294395071')"
+                    + "insert into Costumer(id_Costumer, Nama, Alamat, No_tlp) values('C002', 'Fikri', 'Bandung', '085294395072')"
+                    + "insert into Costumer(id_Costumer, Nama, Alamat, No_tlp) values('C003', 'bagas', 'Majalengka', '085294395073')"
+                    + "insert into Costumer(id_Costumer, Nama, Alamat, No_tlp) values('C004', 'gisa', 'Bantul', '085294395074')"
+                    + "insert into Costumer(id_Costumer, Nama, Alamat, No_tlp) values('C005', 'gabus', 'Kuningan', '085294395075')"
                    , 
                    
                    con);
